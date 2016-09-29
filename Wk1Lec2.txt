@@ -1,0 +1,119 @@
+WEEK 1, LECTURE 2
+
+Operators on ints and floats
+    +
+    -
+    *
+    **  This is the exponent, e.g. 3**3 = 27
+    /
+    %   This gives you the remainder, see below
+Division
+NOTE: 
+    Works fine if at least one of the number is a float.
+    HOWEVER, if both are ints, the result is an int, which
+    is the "quotient without taking the remainder"
+    e.g.:   3.0/2.0 = 1.5
+            3.0/2 = 3/2
+            3/2 = 1
+    To get the REMAINDER, use %.
+    e.g.    5%2 = 1
+##
+Operator Precedence
+    Just remember to use brackets...
+##
+Comparison Operators on ints and floats
+    >
+    >=
+    <
+    <=
+    ==  REMEMBER that a single equals sign, =, ASIGNS the value.
+        You need two of them, ==, to evaluate if two values are
+        the same or not
+    !=
+    
+    This can be used on ints, and returns True or false
+    e.g.: 
+        3>2
+        True
+        3>4
+        False
+        
+    a and b : True if both are True
+    a or b  : True if either is True
+##
+Type Conversion
+    float()
+    int()
+    str()
+    
+    e.g.:    float(3) = 3.0
+             int(3.9) = 3   
+ #################################################
+ ##           Variables and Naming              ##
+ #################################################
+ e.g.:
+    pi = 3.14159
+    radius = 11.2
+    area = pi * (radius**2)
+    
+    NOTE that when you print area, this is not dynamic.
+    Therefore, if I change the value of radius, area is not 
+    automatically reevaluated. Instead I have to reset it.
+    
+    radius = 15
+    area = pi * (radius**2)
+##
+None-Scalar Objects
+    strings : str in python
+    
+Operations on strings
+    *               e.g.: 3 * 'ab' = 'ababab'
+    +               e.g.: 'a'+'b' = 'ab'
+    len()           e.g.: len('abc') = 3
+    'str'[#]        Indexing, see below
+    'str'[-#]
+    'str'[#1:#2]    Returns a substring, starting at and
+                    including #1, all the way up to, but
+                    NOT including, #2
+                      
+Indexing
+    e.g.:     'abc'[0] = 'a'
+              'abc'[-1] = 'c'  
+              'abc'[0:2] = 'ab'
+##
+Getting Input form the User
+
+    Use raw_input('a prompt')
+  
+    e.g.:   name = raw_input('please type your name')
+ #################################################
+ ##             Branching Programs              ##
+ #################################################   
+
+if <<something>> == <<something>>:
+    <<some code>>
+else:
+    <<some other code>>
+
+e.g.:
+import time
+UserInt = int(
+    raw_input(
+         'Please type an int. We will then tell you if it is an '
+        +'even or odd number.'
+        +'\n'
+    )
+)
+print('')
+time.sleep(1)
+##
+if UserInt % 2 == 0:
+    print('Your number is even')
+else:
+    print('It is odd!') 
+print('') 
+time.sleep(1)
+##
+print('This has been another MA original.')
+
+    
