@@ -96,7 +96,7 @@ g(x)
 print(x)    
 #
 e.g. 2 will not, however, since there is no x defined
-    within the funciton, and it is therefore trying to modify
+    within the funcsiton, and it is therefore trying to modify
     the x declared outside the function, and it does not have rights
     to do so.
 def h(y):
@@ -108,5 +108,26 @@ print(x)
 ****************
 ** for Python questions, go to www.pythontutor.com
 *****************
+
+###################################################
+
+VIDEO 4
+Keyword Arguments and Default Values
+
+To set a default value for a parameter, you set it in the
+    definition of the function
+e.g.:
+def printName(fn, ln, reverse = False):
+    if reverse:
+        print(ln + ", " + fn)
+    else:
+        print(fn + " " + ln)
+
+printName("Max", "Albrecht") ## <-- Will use the default, False
+printName("Max", "Albrecht", True) ## Here we override the default
+###################################################
+
+VIDEO 5
+Specification
 
 
