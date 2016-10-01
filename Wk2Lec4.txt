@@ -137,5 +137,29 @@ A Specification is just the description of the function
 VIDEO 6
 Iteration vs Recursion
 
+Recursion is a programming technique where a function call itself
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
