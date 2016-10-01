@@ -130,7 +130,12 @@ printName("Max", "Albrecht", True) ## Here we override the default
 VIDEO 5
 Specification
 
-Specification is just the description of the function
+A Specification is just the description of the function
     or program that is given in the "doc string"
+###################################################
+
+VIDEO 6
+Iteration vs Recursion
+
 
 
