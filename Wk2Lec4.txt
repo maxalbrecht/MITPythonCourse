@@ -57,3 +57,29 @@ evalQuadratic(1,2,3,4)
 ###################################################
 
 VIDEO 3
+Calling Functions
+e.g. 1:
+def f(x):
+    x = x+1
+    print("in f(x) x equals "+ str(x))
+x=5  
+f(x)
+print(str(x))
+#
+e.g. 2:
+def fa():
+    print("inside fa")
+def fb(y):
+    print("inside fb")
+    return y
+def fc(z):
+    print("inside fc")
+    return z()
+"""
+print(fa())
+print(fb(2))
+"""
+print(
+    fc(fa)
+)
+#
