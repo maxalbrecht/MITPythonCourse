@@ -83,3 +83,27 @@ print(
     fc(fa)
 )
 #
+Inside a function we CAN ACCESS a variable defined outsite it
+HOWEVER, inside a funciton we CANNOT MODIFY a variable defined
+outside it.
+e.g.1 will succeed:
+def g(y):
+    print(x)
+    print(x+1)
+
+x=5
+g(x)
+print(x)    
+#
+e.g. 2 will not, however, since there is no x defined
+    within the funciton, and it is therefore trying to modify
+    the x declared outside the function, and it does not have rights
+    to do so.
+def h(y):
+    x = x + 1
+x=5
+h(x)
+print(x) 
+#
+
+
