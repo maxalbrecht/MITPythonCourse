@@ -1,10 +1,59 @@
 WEEK 2, LECTURE 4
 
+VIDEO 1
 Decomposition and Abstraction
 
 Abstraction: think of a black box. you just need to know the input
     and the output
 
 Decomposition: Have separate pieces work together to achieve an
-    end goal
+    end goal.
+    In other words, I will break up a problem into different self-
+    contained pieces. (Once they are built, all I need to know is 
+    what is the expected input and what is the expected output.)
+###
+We will begin with decomposition with functions
+
+###################################################
+
+VIDEO 2
+Functions and Scope
+
+A function is a reusable chunk of code
+A function has a name and takes parameters
+Each function should have a "doc string," i.e. documentation
+    that tells me what the function does
+The BODY of the function is the sequence of commands or instructions
+    that we want to have happen
     
+######
+HOW TO WRITE AND CALL A FUNCTION
+e.g. 1:
+#
+def is_even(i):
+    """
+    Input: i, a positive int
+    Returns True if i is even, otherwise False
+    """
+    print("hi")
+    return i%2 == 0
+    
+is_even(3)
+#
+e.g. 2:
+def evalQuadratic(a, b, c, x):
+    '''
+    a, b, c: numerical values for the coefficients of a quadratic equation
+    x: numerical value at which to evaluate the quadratic.
+    '''
+    # Your code here
+    print(
+        a*(x**2)
+        +b*x
+        +c
+    )
+    
+evalQuadratic(1,2,3,4)
+###################################################
+
+VIDEO 3
