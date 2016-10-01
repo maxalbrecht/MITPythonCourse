@@ -1,2 +1,10 @@
-WEEK 2, LECTURE 3
+WEEK 2, LECTURE 4
 
+Decomposition and Abstraction
+
+Abstraction: think of a black box. you just need to know the input
+    and the output
+
+Decomposition: Have separate pieces work together to achieve an
+    end goal
+    
