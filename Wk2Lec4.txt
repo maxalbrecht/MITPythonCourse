@@ -161,6 +161,22 @@ def factorial_recursive(n):
         
 print(factorial_inter(5))       
 print(factorial_recursive(5))
+###
+e.g. 2, power, recursive method:
+
+def recurPower(base, exp):
+    '''
+    base: int or float.
+    exp: int >= 0
+ 
+    returns: int or float, base^exp
+    '''
+    # Your code here
+    result = 1
+    if exp == 0:
+        return result
+    else:
+        return(base* recurPower(base, exp-1))
 
 ###################################################
 
