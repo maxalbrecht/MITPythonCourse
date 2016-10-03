@@ -182,7 +182,19 @@ def recurPower(base, exp):
 
 VIDEO 7
 
+Inductive Reasoning
 
+How do you know that a recursive call will terminate?
+That is, how can you induce that it will terminate?
+
+    If I want to prove a statement that is indexed on
+    intergers, that is, a statement taht is applied to
+    a set of intergers, and I want to prove that it is 
+    true for all values of some parameter n, I just have
+    to prove that it is true when n has its smallest value,
+    for example when n is zero or one. Then I just have to
+    prove taht it is true for some arbitrary n, as well as
+    for n plus  1.
 
 
 
