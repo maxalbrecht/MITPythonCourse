@@ -272,6 +272,25 @@ print(isIn('f', 'abcde'))
 
 VIDEO 11
 
+Files
+
+So far we have assumed all our code is stored in one file. That is cumbersome
+when I have large collections of code, or expecially when I have a collection
+of code that is going to be used by different people in different places and
+I would like to be able to access it directly. To handle this, we are going to 
+use MODULES.
+
+A MODULE is a .py files containing a collection of Python definitions and
+statements.
+
+HOW TO USE MODULES:
+
+
+
+
+
+
+
 
 
 
