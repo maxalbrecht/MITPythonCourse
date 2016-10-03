@@ -196,6 +196,12 @@ That is, how can you induce that it will terminate?
     prove taht it is true for some arbitrary n, as well as
     for n plus  1.
 
+###################################################
+
+VIDEO 8
+
+Towers of Hanoi
+
 
 
 
