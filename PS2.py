@@ -29,7 +29,7 @@ def End_of_Year_Balance(balance, annualInterestRate, monthlyPaymentRate):
     print(round(balance,2))
 ###########################################################################
 
-def Min_Payment_to_Pay_off_Card(balance, annualInterestRate, payment=10):
+def Min_Payment_to_Pay_off_Card(balance, annualInterestRate, payment=.38):
     """
     The following prints out the minimum (constant) monthly payment to pay
     off a credit card, given a balance and an interest rate
@@ -49,9 +49,52 @@ def Min_Payment_to_Pay_off_Card(balance, annualInterestRate, payment=10):
     if balance <0:
         print(payment)
     else:
-        return Min_Payment_to_Pay_off_Card(balance0, annualInterestRate, payment+10)
+        return Min_Payment_to_Pay_off_Card(balance0, annualInterestRate, payment+.38)
 ###########################################################################
+def Min_Payment_to_Pay_off_Card_Bisect(
+     balance
+    ,annualInterestRate
+    ,lower_bound = 0
+    ,upper_bound = 100
+    ):
+    """
+    The following prints out the minimum (constant) monthly payment to pay
+    off a credit card, given a balance and an interest rate
+    """
+    var = 10
+    balance0 = balance
+    months_left = 12
+    payment = (lower_bound+upper_bound)/2
+    #######
+    while months_left > 0:
+        balance = (
+            (balance - payment)
+            *(
+                1
+                +((annualInterestRate/12.0))
+            )
+            
+        )
+        months_left -= 1
+    #######
+    if balance <= (-var):
+        return Min_Payment_to_Pay_off_Card_Bisect(
+            balance0
+            ,annualInterestRate
+            ,lower_bound
+            ,payment
+            )
+    if balance >= (var):
+        return Min_Payment_to_Pay_off_Card_Bisect(
+            balance0
+            ,annualInterestRate
+            ,payment
+            ,upper_bound
+            )
+    else:
+        return(payment)
 
+Min_Payment_to_Pay_off_Card_Bisect(5000, .2)
 
     
     
