@@ -63,8 +63,8 @@ def Min_Payment_to_Pay_off_Card_Bisect(
     """
     var = 10
     balance0 = balance
-    months_left = 12
     payment = (lower_bound+upper_bound)/2
+    months_left = 12
     #######
     while months_left > 0:
         balance = (
