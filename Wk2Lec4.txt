@@ -285,7 +285,18 @@ statements.
 
 HOW TO USE MODULES:
 
+We can either import the file in which we have saved our functions, in which
+case we have to then specify the name of the file along with the name of the
+function when we use it:
 
+    import circle
+    print(circle.area(3))
+    
+We can also import the functions themselves, so that we don't have to specify
+the name of the file before the function:
+
+    from circle import *
+    print(area(3))
 
 
 
