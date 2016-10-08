@@ -55,13 +55,30 @@ def Min_Payment_to_Pay_off_Card_Bisect(
      balance
     ,annualInterestRate
     ,lower_bound = 0
-    ,upper_bound = 100
+    ,upper_bound = 0
     ):
     """
     The following prints out the minimum (constant) monthly payment to pay
     off a credit card, given a balance and an interest rate
     """
-    var = 10
+    if lower_bound == 0:
+        lower_bound = balance/12
+        ##print('lower bound:' +str(lower_bound))
+    if upper_bound == 0:
+        upper_bound = (
+            (
+                balance
+                *(
+                    (
+                        1
+                        +(annualInterestRate/12)
+                    )**12
+                 )
+            )
+            /12.0
+        )
+        ##print('upper bound: ' +str(upper_bound))
+    var = .01
     balance0 = balance
     payment = (lower_bound+upper_bound)/2
     months_left = 12
@@ -78,6 +95,7 @@ def Min_Payment_to_Pay_off_Card_Bisect(
         months_left -= 1
     #######
     if balance <= (-var):
+        ##print('balance below: '+str(balance))
         return Min_Payment_to_Pay_off_Card_Bisect(
             balance0
             ,annualInterestRate
@@ -85,6 +103,7 @@ def Min_Payment_to_Pay_off_Card_Bisect(
             ,payment
             )
     if balance >= (var):
+        ##print('balance above: '+str(balance))
         return Min_Payment_to_Pay_off_Card_Bisect(
             balance0
             ,annualInterestRate
@@ -92,9 +111,10 @@ def Min_Payment_to_Pay_off_Card_Bisect(
             ,upper_bound
             )
     else:
-        return(payment)
+        ##print('end: '+str(balance))
+        return(round(payment, 2))
 
-Min_Payment_to_Pay_off_Card_Bisect(5000, .2)
+print(Min_Payment_to_Pay_off_Card_Bisect(320000, .2))
 
     
     
