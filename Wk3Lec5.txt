@@ -62,6 +62,7 @@ def get_data(aTuple):
     return (min_nums, max_nums, unique_words)
     
 ____
+From Exercise 1:
 If you have a tuple with a tuple within it, you can get at one
 of the items in the sub-tuple by adding a second index indicator,
 so for example:
@@ -70,6 +71,25 @@ t[0][0]
 
 so if the first element in tuple t is another tuple, then we will
 get the first item in that sub-tuple
+
+---
+From Exercise 2:
+def oddTuples(aTup):
+    """
+    aTup: a tuple
+    returns: a tuple, with every other element of aTup
+    """
+    result = ()
+    current_item = 0
+    total_items = len(aTup) - 1
+    print total_items
+    while current_item <= total_items:
+        if current_item %2 == 0:
+            result = result + (aTup[current_item],)
+        current_item += 1
+    return(result)
+    
+print(oddTuples(("I", "am", "a", "test", "tuple", "right", 5)))
     
 ###################################################
 
