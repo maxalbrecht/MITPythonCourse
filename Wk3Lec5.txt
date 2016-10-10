@@ -1,0 +1,68 @@
+WEEL 3, LECTURE 5
+
+VIDEO 1
+Tuples and Lists
+
+Tuple: An ordered sequence of elements, can mix elemet types
+    Immutable, so that you cannot change the values of elements
+    Are represented with parentheses
+    e.g.:    
+        te = ()
+        t = (2, "one", 3)
+        t(0) -> evaluates to 2
+        (2, "one", 3) + (5, 6) -> 
+            evaluates to (2, "one", 3, 5, 6)
+        t[1:2] -> slices tuple, evaluate to ("one",)
+        t[1:3] -> slices tuple, evaluates to ("one", 3)
+        t[1] = 4 -> gives an ERROR, can't modify object
+    NOTICE the tuple  with only one item. It has a comma after
+    the one item, which tells us that this is a TUPLE, and not
+    just an item.
+            
+USES OF TUPLES:
+
+    For example, swapping variables; If I have x and y, and I 
+    want to set x to the value of y, and y to the value x.
+    Instead of having to use a temp variable to store one of 
+    the values, as in:
+        temp = x
+        x = y
+        y = temp
+    Instead we can do the following:
+        (x, y) = (y, x)
+    
+    ***This also allows you to return more than one variable***
+    from one function:
+    
+        def quotient_and_remainder( x, y):
+            q = x//y
+            r = x%y
+            return (q, r)
+        (quot, rem) = quotient_and_remainder(4, 5)
+    ***********************************************************
+    
+We can also ITERATE over TUPLES
+    
+Let's say that you have a bunch of tuples, each of which
+are two items, one int and one string.
+That is to say, these tuples will come in a tuple as well.
+Let's then say that I want to gather all of the ints into
+a new tuple, and all the strings into a new tuple:
+
+def get_data(aTuple):
+    nums= ()
+    words= ()
+    for t in aTuple:
+        nums = nums + (t[0],)
+        if t[1] not in words:
+            words = words + (t[1],)
+    min_nums = min(nums)
+    max_nums = max(nums)
+    unique_words = len(words)
+    return (min_nums, max_nums, unique_words)
+    
+###################################################
+
+VIDEO 2
+Lists
+        

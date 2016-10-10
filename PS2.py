@@ -47,7 +47,7 @@ def Min_Payment_to_Pay_off_Card(balance, annualInterestRate, payment=.38):
         )
         months_left -= 1
     if balance <0:
-        print(payment)
+        print(round(payment,2))
     else:
         return Min_Payment_to_Pay_off_Card(balance0, annualInterestRate, payment+.38)
 ###########################################################################
@@ -112,9 +112,9 @@ def Min_Payment_to_Pay_off_Card_Bisect(
             )
     else:
         ##print('end: '+str(balance))
-        return(round(payment, 2))
+        print(round(payment, 2))
 
-print(Min_Payment_to_Pay_off_Card_Bisect(320000, .2))
+Min_Payment_to_Pay_off_Card_Bisect(320000, .2)
 
     
     
