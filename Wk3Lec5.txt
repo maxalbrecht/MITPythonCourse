@@ -1,9 +1,9 @@
-WEEL 3, LECTURE 5
+WEEK 3, LECTURE 5
 
 VIDEO 1
 Tuples and Lists
 
-Tuple: An ordered sequence of elements, can mix elemet types
+Tuple: An ordered sequence of elements, can mix element types.
     Immutable, so that you cannot change the values of elements
     Are represented with parentheses
     e.g.:    
@@ -80,19 +80,189 @@ def oddTuples(aTup):
     returns: a tuple, with every other element of aTup
     """
     result = ()
-    current_item = 0
-    total_items = len(aTup) - 1
-    print total_items
-    while current_item <= total_items:
-        if current_item %2 == 0:
-            result = result + (aTup[current_item],)
-        current_item += 1
-    return(result)
-    
+    for i in range(len(aTup)):
+        if i %2 == 0:
+            result = result + (aTup[i],)
+    return(result)  
 print(oddTuples(("I", "am", "a", "test", "tuple", "right", 5)))
-    
 ###################################################
 
 VIDEO 2
 Lists
+
+Lists are very similar to tuples, so that:
+    It is an ORDERED SEQUENSE of information, which is accesible
+        by SQUARE BRACKETS, [] 
+    It contains ELEMENTS
+        These are usually homogenious, e.g. all intergers
+        HOWEVER, although not common, they can also contain
+            mixed types
+    
+    HOWEVER, UNLIKE TUPLES, list elements can be CHANGED,
+        so that a list is MUTABLE.
+Examples:
+
+a_list = []
+b_list = [2. 'a', 4, True]
+L = [2, 1, 3]
+
+len(L) -> evaluates to 3
+L[0] -> evaluates to 2
+L[2] +1 -> evaluates to 4
+L[3] -> gives an error, since the index for this list goes 0, 1, 2
+###
+
+CHANIGING ELEMENTS
+
+e.g.:
+    L = [2, 1, 3]
+    L[1] = 5
+    L is now [2, 5, 3]
+        NOTE that this is the SAME OBJECT L
+###
+
+ITERATING OVER A LIST
+
+e.g.: Compute the SUM OF ELEMENTS of a list
+#
+total = 0
+for i in L:
+    total += i
+print(total)
+#
+
+###################################################
+
+VIDEO 3
+Operations on Lists
+
+* We can add to the end of a list
+e.g.:
+    L = [2, 1, 3]
+    L.append(5)
+    L is now [2, 1, 3, 5]
+    
+    NOTE though that it seems that we can add to a list by just
+    using the add sign, so we could have done L = L + [5]
+###
+
+REMOVE ELEMENTS FROM A LIST:
+We can do this with the general delete command:
+
+    **Delete an element at A SPECIFIC INDEX:
+        del(L[index])
+
+    **Remove element at END OF A LIST with L.pop(), which RETURNS
+        the removed element.
+
+    **Remove a SPECIFIC ELEMENT with L.remove(element)
+        * Looks for the element and removes it
+        * If element occurs more than once, removes the first
+            occurrence
+        * If the element is not in the list, it gives an error
+e.g.s:
+L = [2, 1, 3, 6, 7, 0]
+L.remove(2) -> mutates L to [1, 3, 6, 3, 7, 0]
+L.remove(3) -> mutates L to [1, 6, 3, 7, 0]
+del(L[1]) -> mutates L to [1, 3, 7, 0]
+L.pop() -> returns 0 and mutates L to [1, 3, 7]
+###
+
+CONVERT LISTS TO STRINGS AND BACK
+
+    STRING TO LIST
+Convert string to list with list(string). This RETURNS a list with
+    every character from string.
+e.g.:
+    s = 'abc'
+    list(string) -> RETURNS  ['a', 'b', 'c']
+    
+If we have a string that is DELIMETED by a particular character,
+    we can use <<string>>.split() TO SPLIT A STRING on that 
+    character. This will spit on SPACES if we call it without
+    a parameter.
+    
+    e.g.:
+        s = "I <3 cs" <- s is a string
+        list(s) ->  
+            returns ['I', ' ', '<', '3', ' ', 'c', 's']
+        s.split('<') -> 
+            returns ['I ', '3 cs']
+        
+    LIST TO STRING
+    
+use ''.join(L) to turn a list of characters into a string.
+    You can also give a character in quotes to add that 
+    character between every element
+    
+    e.g.:
+        L = ['a', 'b', 'c']
+        ''.join(L) -> returns 'abc'
+        ' '.join(L) -> returns 'a_b_c'
+    
+OTHER LIST OPERATIONS
+
+** sort() and sorted()
+** reverse()
+** and others
+
+e.g. of sort(), sorted() and reverse()
+
+    L = [9, 6, 0, 3]
+    sorted(L) -> returns a sorted list, but it does NOT mutate L
+    L.sort() -> mutates L into [0, 3, 6, 9]
+    L.reverse() -> mutates L into [9, 6, 3, 0]
+
+###
+
+BRINGING TOGETHER LOOPS, FUNCITONS, range, and LISTS
+
+** range is a special prcedure
+    * It returns something that behaves like a tuple
+    * It does not generate all the elements at once, rather it
+        generates the first element, and provides an iteration
+        method by which subsequent elements can be generated
+    e.g.:
+        range(5) -> equivalent to tuple (0,1,2,3,4)
+        range(2,6) -> equivalent to tuple (2,3,4,5)
+        range(5,2,-1) -> equivalent to tuple (5,4,3)
+        
+** when you use range in a for loop, what the loop variable
+    iterates over behaves like a list:
+        for var in range(5):
+            <expressions>
+    begind the scence, this gets converted to something 
+        that will begave like:
+            for var in (0,1,2,3,4):
+                <expressions>
+###################################################
+
+VIDEO 4
+Mutation, Aliasing, Cloning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
