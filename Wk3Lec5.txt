@@ -240,6 +240,57 @@ BRINGING TOGETHER LOOPS, FUNCITONS, range, and LISTS
 VIDEO 4
 Mutation, Aliasing, Cloning
 
+lists are mutable
+they behave differently thatn immutale types
+a list is an object in memory
+the variable name points to the object
+any variable pointing to that object is affected
+
+if you change the variable under one name, it will also change it 
+under the other name. Example:
+
+warm = ['red', 'yellow', 'orange']
+hot = warm
+
+hot.append('pink')
+
+hot -> returns ['red', 'yellow', 'orange', 'pink']
+warms -> also returns ['red', 'yellow', 'orange', 'pink'] because the
+    two variable names point to the same object
+###
+
+CLONING A LIST
+
+cool = ['blue', 'green', 'gray']
+chill = cool[:]
+
+this creates a new object for chill to point to.
+###
+
+SORTING LISTS
+
+sort() mutates the list, returns nothing
+sorted does NOT mutate the list, and you must assign the result to a variable
+if you want to use it somewhere else
+
+e.g.:
+
+warm = ['red', 'yellow', 'orange']
+sortedwarm = warm.sort()
+
+print(warm) -> returns ['red', 'yellow', 'orange']
+print(sortedwarm) ->since sort does not return anything, we didn't actually
+    set sortedwarm to be equal to anything, so this would just return none
+###
+
+MUTATUION AND ITERATION
+
+AVOID mutating a list as you are iterating over it.
+    IF you do, since Python uses an internal counter to keep ttrack of the
+    index it is in the loop, mutating changes the list length, but Python does
+    not update the counter. Therefore, the loop would miss elements.
+INSTEAD, clone the list, and iterate over this new list as you mutate the 
+    original one
 
 
 
@@ -256,13 +307,5 @@ Mutation, Aliasing, Cloning
 
 
 
-
-
-
-
-
-
-
-
-
+        
         
