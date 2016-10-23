@@ -1,6 +1,6 @@
 WEEK 3, LECTURE 6
 
-VIDEO 1
+VIDEO 2
 Dictionaries
 
 * A dictionary is going to have e3lements indexed by a key (label)
@@ -73,7 +73,23 @@ To get a "list" of the values in the dictionary:
     * no order is guaranteed
     * key can be any immutable type
     
-                           
+###########################################################
+
+VIDEO 2
+Example with a Dictionary
+
+Task: 
+1) create a frequency dictionary mapping str:int
+2) find the word that occurs the most and how many times
+    * use a list, in case there is more than word
+    * return a tuple (list, int) for (wods_list, highest_freq)
+3) find the words that occur at least X times
+    * let the user choose "at least X times", so allow as parameter
+    * return a lsit of tuples, each tuple is a (list, int)
+      containing the list of words ordered by thier frequency
+    * IDEA: From song dictioary, find the most frequent word.
+            Delete the most common word.Repeat. It works because you are
+            mutating the song dictionary
         
         
         
