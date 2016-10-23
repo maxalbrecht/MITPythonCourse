@@ -1,0 +1,128 @@
+WEEK 1, LECTURE 6
+
+VIDEO 2
+Dictionaries
+
+* A dictionary is going to have e3lements indexed by a key (label)
+
+* A python dictionary sotres pairs of day: 
+    a key
+    a value
+
+TO CREATE A NEW DICTIONARY:
+    e.g.:
+        grades = {'Ana':'B', 'John':'A+', 'Denise':'A', 'Katy':'A'}
+        
+        print(grades['John']) #prints A+
+###
+
+To ADD an entry:
+    e.g. cont'd from above:
+    
+        grades['Sylvan'] = 'A'
+        print(grades['Sylvan']) # prints A
+###
+
+To CHECK if entry is in the dictionary:
+        
+'John' in grades # returns True
+'Daniel'  in grades # returns False
+###
+
+To DELETE from a dictionary:
+    del(grades['Ana'])
+###
+
+To get a "list" of the keys in the dictionary
+        grades.keys() # returns ['Denise', 'Katy', 'John', 'Ana']
+###
+
+To get a "list" of the values in the dictionary:
+        grades.values() # returns ['A', 'A', 'A+', 'B']
+###
+
+* values
+    can be any type (immutable and mutable)
+    can be duplicates
+    dictionary values can be lists, even other dictionaries!
+    
+* keys
+    must be  UNIQUE
+    IMMUTABLE type (int, float, string, tuple, bool)
+        Actually need an object that is HASHABLE, but you can think of it
+        as immutable since all immutable types are hashable
+    CAREFUL with float type as a key
+    
+* NO ORDER to keys or values!
+
+###
+
+ LIST vs DICTIONARY
+ 
+    list
+    
+    * ordered sequence of elements
+    * look up elements by an interger index
+    * indices have an order
+    * index is an interger
+    
+    dictionary
+    
+    * matches "keys" to "values"
+    * look up one item by another item
+    * no order is guaranteed
+    * key can be any immutable type
+    
+###########################################################
+
+VIDEO 2
+Example with a Dictionary
+
+Task: 
+1) create a frequency dictionary mapping str:int
+2) find the word that occurs the most and how many times
+    * use a list, in case there is more than word
+    * return a tuple (list, int) for (wods_list, highest_freq)
+3) find the words that occur at least X times
+    * let the user choose "at least X times", so allow as parameter
+    * return a lsit of tuples, each tuple is a (list, int)
+      containing the list of words ordered by thier frequency
+    * IDEA: From song dictioary, find the most frequent word.
+            Delete the most common word.Repeat. It works because you are
+            mutating the song dictionary
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
