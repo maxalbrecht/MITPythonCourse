@@ -8,6 +8,24 @@ programming and to elt you actually control how the
 computer reacts when something goes in an unexpected
 way."
 
+What happens when procedure execution hits an unexpected
+condition?
+-> you get an exception... to what was excpeted.
+e.g.:
+
+*trying to access beyong list limits
+    test = [1,7,4]
+    test[4]
+    -> IndexError
+*trying to convert an inappropriate type
+    int(test)
+    -> TypeError
+*referencing a non-existing variable
+    a
+    ->NameError
+*mixing data types without coercion
+    'a'/4
+    -> TypeError
 
 
 
