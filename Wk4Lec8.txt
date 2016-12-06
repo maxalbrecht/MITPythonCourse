@@ -2,6 +2,12 @@ WEEK 4, LECTURE 8
 
 VIDEO 1
 
+"Today, we're going to talk about the use of exceptions
+and the use of assertions, both to accomplish defensive
+programming and to elt you actually control how the
+computer reacts when something goes in an unexpected
+way."
+
 
 
 
