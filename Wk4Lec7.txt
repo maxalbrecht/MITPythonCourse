@@ -1,50 +1,6 @@
 WEEK 4, LECTURE 7
 
-VIDEO 1
-Exceptions: Dealing with Exceptions
-
-* Python code can provide handlers for exceptions
-  e.g.:
-    try:
-        a = int(input("Tell me one number:"))
-        b = int(input("Tell me another number:"))
-        print(a/b)
-        print ("Okay")
-    except:
-        print("Bug in user input.")
-    print("Outside")
-    
-* Exceptions **raised** by any statement in the body of **try**
-  are **handled** by the **except** statement and execution continues
-  after the body of the except statement
-
-  e.g. 2; different messages depending on the error raised:
-    try:
-        a = int(input("Tell me one number:"))
-        b = int(input("Tell me another number:"))
-        print ("a/b = ", a/b)
-        print ("a+b = ", a+b)
-    except ValueError:
-        print("Could not convert to a number.")
-    except ZeroDivisionError:
-        print("Can't divide by zero.")
-    except:
-        print("Something went very wrong.")
-
-* else
-    * body of this is executed when the execution of the associated try body
-      completes with no exceptions
-      
-* finally
-    * body of this is always executed after try, else, and except clauses,
-      even if they raised another error or ex3cuted a break, continue or return
-    * Useful for clean-up code that should be run nomatter waht else happened
-      (e.g. close a file)
-      
-######################################
-
-VIDEO 2
-Exceptions Examples
+Testing and Debugging
 
 
 

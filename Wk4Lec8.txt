@@ -72,16 +72,80 @@ e.g.:
 * exceptions RAISED by any statement in body of TRY are HANDLED
   by the EXCEPT statement and execution continues after
   the body of the except statement.
+###
 
+HANDLING SPECIFIC EXCEPTIONS
 
+* have SEPARATE EXCEPT CLAUSES to deal with a particular
+  type of exception
 
+e.g.:
+    try:
+        a = int(input("Tell me one number:"))
+        b = int(input("Tell me another number:"))
+        print "a/b = ", a/b)
+        print("a+b = ", a+b)
+    except ValueError:
+        print("Could not convert to a number.")
+    except ZeroDivisionError:
+        print("Can't divide by zero")
+    except:
+        prrint("Something went very wrong.")
+###
 
+OTHER EXCEPTIONS
 
+* else:
+    * body of this is executed when execution of
+      associated TRY body COMPLETES WITH NO EXCEPTIONS
+* finally:
+    * body of this is ALWAYS EXCECUTED after
+      TRY, ELSE, and EXCEPT clauses, even if they raised
+      another error or executed a BREAK, CONTINUE
+      or RETURN
+    * useful for clean-up code taht should be run no matter
+      what else happened (e.g. close a file)
+#######################################################################
 
+VIDEO 2
+Exceptions Examples
 
+EXAMPLE: EXCEPTION USAGE
 
+Let's say that we would like to ask the user for an interger. Instead
+of re-running all the code until this is done correctly,we can create
+a loop in which we keep asking for that input until it is done
+correctly:
 
+while True:
+    try:
+        n = input("Please enter an integer: ")
+        n = int(n)
+        break
+    except ValueError:
+        print("Input not an integer; try again")
+print("Correct input of an integer!")
+###
 
+EXAMPLE: CONTROL INPUT
+
+Let's say you want the user to provide a file name, and then do
+something to the data in that file:
+
+data = []
+file_name = input("provide a name of a file of data"
+
+try:
+    fh = open(file_name, 'r')
+except IOError:
+  print("cannot open ", file_name)
+else:
+    for new in fh:
+        if new != "\n":
+            addIt = new[:-1].split(",") #remove trailing \n  
+            data.append(addIt)
+finally:
+    fh.close() # close file even if fail
 
 
 
