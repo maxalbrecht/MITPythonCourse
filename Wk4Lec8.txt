@@ -44,7 +44,7 @@ WHAT TO DO WITH EXCEPTIONS?
 
 *could fail silently:
     * substitute default values or just continue
-    * bad idea! user gets no warning
+    * bad idea!!!! user gets no warning
 
 * return an "error value
     * waht value to choose?
@@ -53,8 +53,25 @@ WHAT TO DO WITH EXCEPTIONS?
 *stop execution, signal error condition
     *in Python: raise an exception
         raise Exception("descriptive string")
+###
 
+DEALING WITH EXCEPTIONS
 
+* Python code can provide HANDLERS for exceptions
+
+e.g.:
+    try:
+        a = int(input("Tell me one number:"))
+        b = int(input("Tell me another number:"))
+        print (a/b)
+        print ("Okay")
+    except:
+        print ("Bug in user input.")
+    print("Outside")
+
+* exceptions RAISED by any statement in body of TRY are HANDLED
+  by the EXCEPT statement and execution continues after
+  the body of the except statement.
 
 
 
