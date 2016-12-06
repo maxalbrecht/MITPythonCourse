@@ -26,9 +26,33 @@ e.g.:
 *mixing data types without coercion
     'a'/4
     -> TypeError
+###
 
+OTHER TYPES OF EXCEPTIONS]
 
+*already seen common error types:
+    * SyntaxError: Python can't parse program
+    * NameError: local or global name not found
+    *AttributeError: attribute reference fails
+    *TypeError: operand doesn't have correct type
+    *ValueError: operand type okay, but value is illegal
+    * IOError: IO system reports malfunction
+        (e.g. file not found)
+###
 
+WHAT TO DO WITH EXCEPTIONS?
+
+*could fail silently:
+    * substitute default values or just continue
+    * bad idea! user gets no warning
+
+* return an "error value
+    * waht value to choose?
+    * complicates code having to check for a special value
+
+*stop execution, signal error condition
+    *in Python: raise an exception
+        raise Exception("descriptive string")
 
 
 
