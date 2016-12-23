@@ -96,7 +96,7 @@ g(x)
 print(x)    
 #
 e.g. 2 will not, however, since there is no x defined
-    within the funcsiton, and it is therefore trying to modify
+    within the function, and it is therefore trying to modify
     the x declared outside the function, and it does not have rights
     to do so.
 def h(y):

@@ -3,7 +3,7 @@ WEEK 1, LECTURE 6
 VIDEO 2
 Dictionaries
 
-* A dictionary is going to have e3lements indexed by a key (label)
+* A dictionary is going to have elements indexed by a key (label)
 
 * A python dictionary sotres pairs of day: 
     a key
@@ -51,7 +51,7 @@ To get a "list" of the values in the dictionary:
     IMMUTABLE type (int, float, string, tuple, bool)
         Actually need an object that is HASHABLE, but you can think of it
         as immutable since all immutable types are hashable
-    CAREFUL with float type as a key
+    CAREFULL with float type as a key
     
 * NO ORDER to keys or values!
 

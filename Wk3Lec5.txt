@@ -198,7 +198,7 @@ use ''.join(L) to turn a list of characters into a string.
     e.g.:
         L = ['a', 'b', 'c']
         ''.join(L) -> returns 'abc'
-        ' '.join(L) -> returns 'a_b_c'
+        '_'.join(L) -> returns 'a_b_c'
     
 OTHER LIST OPERATIONS
 
@@ -217,7 +217,7 @@ e.g. of sort(), sorted() and reverse()
 
 BRINGING TOGETHER LOOPS, FUNCITONS, range, and LISTS
 
-** range is a special prcedure
+** range is a special procedure
     * It returns something that behaves like a tuple
     * It does not generate all the elements at once, rather it
         generates the first element, and provides an iteration
@@ -231,7 +231,7 @@ BRINGING TOGETHER LOOPS, FUNCITONS, range, and LISTS
     iterates over behaves like a list:
         for var in range(5):
             <expressions>
-    begind the scence, this gets converted to something 
+    behind the scenes, this gets converted to something 
         that will begave like:
             for var in (0,1,2,3,4):
                 <expressions>
@@ -241,7 +241,7 @@ VIDEO 4
 Mutation, Aliasing, Cloning
 
 lists are mutable
-they behave differently thatn immutale types
+they behave differently than immutale types
 a list is an object in memory
 the variable name points to the object
 any variable pointing to that object is affected
@@ -283,10 +283,10 @@ print(sortedwarm) ->since sort does not return anything, we didn't actually
     set sortedwarm to be equal to anything, so this would just return none
 ###
 
-MUTATUION AND ITERATION
+MUTATION AND ITERATION
 
 AVOID mutating a list as you are iterating over it.
-    IF you do, since Python uses an internal counter to keep ttrack of the
+    IF you do, since Python uses an internal counter to keep track of the
     index it is in the loop, mutating changes the list length, but Python does
     not update the counter. Therefore, the loop would miss elements.
 INSTEAD, clone the list, and iterate over this new list as you mutate the 
@@ -300,7 +300,7 @@ e.g.:
 
 def applyToEach(L,f):
     """
-    Assumes L is a list and taht f is a function.
+    Assumes L is a list and that f is a function.
     It mutates L by replacing each element, e, of L by f(e)
     """
     for i in range(len(L)):

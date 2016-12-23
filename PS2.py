@@ -114,7 +114,8 @@ def Min_Payment_to_Pay_off_Card_Bisect(
         ##print('end: '+str(balance))
         print(round(payment, 2))
 
-Min_Payment_to_Pay_off_Card_Bisect(320000, .2)
+#Min_Payment_to_Pay_off_Card_Bisect(320000, .2)
+End_of_Year_Balance(32000, .2, .1)
 
     
     

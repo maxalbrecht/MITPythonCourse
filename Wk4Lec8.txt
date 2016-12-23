@@ -4,16 +4,16 @@ VIDEO 1
 
 "Today, we're going to talk about the use of exceptions
 and the use of assertions, both to accomplish defensive
-programming and to elt you actually control how the
+programming and to let you actually control how the
 computer reacts when something goes in an unexpected
 way."
 
 What happens when procedure execution hits an unexpected
 condition?
--> you get an exception... to what was excpeted.
+-> you get an exception... to what was expected.
 e.g.:
 
-*trying to access beyong list limits
+*trying to access beyond list limits
     test = [1,7,4]
     test[4]
     -> IndexError
@@ -28,7 +28,7 @@ e.g.:
     -> TypeError
 ###
 
-OTHER TYPES OF EXCEPTIONS]
+OTHER TYPES OF EXCEPTIONS
 
 *already seen common error types:
     * SyntaxError: Python can't parse program
@@ -46,8 +46,8 @@ WHAT TO DO WITH EXCEPTIONS?
     * substitute default values or just continue
     * bad idea!!!! user gets no warning
 
-* return an "error value
-    * waht value to choose?
+* return an "error value"
+    * what value to choose?
     * complicates code having to check for a special value
 
 *stop execution, signal error condition

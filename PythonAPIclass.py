@@ -8,4 +8,4 @@ try:
     
     print responseB[1:3000]
 except URLError, e:
-    print 'Got and error: ', e
+    print 'Got an error: ', e
