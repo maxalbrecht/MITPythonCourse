@@ -151,6 +151,55 @@ finally:
 .
 further into this example. Not terribly extensible, so skipping rest of this video.
 
+#######################################################################
+
+VIDEO 3
+Exceptions as Control Flow
+
+* Don't return special values when an error occured and then check whether 
+  "error value" was returned
+
+* Instead, raise an exception when unable to produce a result consistent with
+  the function's specification
+  
+raise <exceptionName> (<arguments>)
+raise ValueError("something is wrong")
+
+...
+Example with just exception handlers
+...
+
+...
+Another example with just exception handlers
+...
+
+So, we can either HANDLE errors, or we can RAISE errors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
