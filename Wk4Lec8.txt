@@ -26,7 +26,9 @@ e.g.:
 *mixing data types without coercion
     'a'/4
     -> TypeError
-###
+    
+#####################
+VIDEO 2
 
 OTHER TYPES OF EXCEPTIONS
 
@@ -103,11 +105,11 @@ OTHER EXCEPTIONS
       TRY, ELSE, and EXCEPT clauses, even if they raised
       another error or executed a BREAK, CONTINUE
       or RETURN
-    * useful for clean-up code taht should be run no matter
+    * useful for clean-up code that should be run no matter
       what else happened (e.g. close a file)
 #######################################################################
 
-VIDEO 2
+VIDEO 3
 Exceptions Examples
 
 EXAMPLE: EXCEPTION USAGE
@@ -153,7 +155,7 @@ further into this example. Not terribly extensible, so skipping rest of this vid
 
 #######################################################################
 
-VIDEO 3
+VIDEO 4
 Exceptions as Control Flow
 
 * Don't return special values when an error occured and then check whether 
@@ -175,9 +177,64 @@ Another example with just exception handlers
 
 So, we can either HANDLE errors, or we can RAISE errors
 
+#######################################################################
 
+VIDEO 5
 
+Assertions as Defensive programming
 
+* While assertions don't allow a programmer to control response to unexpected
+conditions, they are a great method for ensuring that execution halts when
+an expected condition is not met
+
+* Typically used to ched inputs to procedures, but can be used anywhere
+
+* Can make it easier to locate the source of a bug
+
+###
+
+eg.:
+
+def avg(grades, wights):
+    assert not len(grades) == 0,'no grades data'
+    newgr = [convertLetterGrade(elt) for elt in grades]
+    return dotProduct(newgr, weights)/ len(newgr)
+    
+###
+
+EXTENDING USE OF ASSERTIONS 
+
+    * While pre-conditions on inputs are valuable to check, can also apply
+      post-conditions on outputs before proceeding ot the next stage
+     
+def avg (grades, weights):
+    assert not len(grades) == 0, 'no grades data'
+    assert len(grades) == len(weights), 'wrong number of grades'
+    
+    newgr = [converLetterGrade(elt) for elt in grades]
+    result = dotProduct9newgr, weights)/len(newgr)
+    
+    asert 0.0 <= result <= 100.0 ## ************* THIS IS OUR POST-CONDITION
+    
+    return result
+
+###
+
+WHERE TO USE ASSERTIONS?
+
+* Goal is to spot bugs early and mae clear where they happened
+    * Easier to debug when when we catch them at the first point of contact,
+      instead of trying to trace them down later
+      
+* Not to be used in place of testing, but as a supplement to testing
+
+* Should probably rely on raising exceptions if user supplies bad data input,
+  and use assertins for the following:
+    * Cheing types of arguments or values
+    * Checking that invariants on data structions are met
+    * Checking constraints on return values
+    * Checking for violations of constraints on procedure 
+      (e.g. no duplicates in a list)
 
 
 
